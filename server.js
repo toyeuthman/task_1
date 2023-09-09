@@ -6,12 +6,21 @@ app.get("/api", (req, res) => {
 
   // current day and time of the week
   const now = new Date();
-  const currentDay = now.toLocaleDateString('en-US', { weekday: 'long' });
-  const utc_time = now.toISOString();
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const currentDay = daysOfWeek[now.getDay()];
+  const utc_time = now.toISOString().split(".");
 
   //Github links
-  const github_file_Url = "https://github.com/toyeuthman/Task-1/blob/main/app.js"
-  const github_repo_url = "https://github.com/toyeuthman/Task-1.git"
+  const github_file_Url = "https://github.com/toyeuthman/";
+  const github_repo_url = "https://github.com/toyeuthman/Task-1.git";
 
   res.json({
     slack_name,
