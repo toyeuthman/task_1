@@ -15,20 +15,14 @@ app.get("/api", (req, res) => {
     "Friday",
     "Saturday",
   ];
-  const currentDay = daysOfWeek[now.getDay()];
-  const utc_time = now.toISOString().split(".");
-
-  //Github links
-  const github_file_Url = "https://github.com/toyeuthman/";
-  const github_repo_url = "https://github.com/toyeuthman/Task-1.git";
 
   res.json({
     slack_name,
-    currentDay,
-    utc_time,
+    currentDay: daysOfWeek[now.getDay()],
+    utc_time: now.toISOString().split("."),
     track,
-    github_file_Url,
-    github_repo_url,
+    github_file_Url: "https://github.com/toyeuthman/",
+    github_repo_url: "https://github.com/toyeuthman/Task-1.git",
     status_code: 200,
   });
 });
