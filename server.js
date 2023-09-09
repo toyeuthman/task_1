@@ -5,7 +5,7 @@ app.get("/api", (req, res) => {
   const { slack_name, track } = req.query;
 
   // current day and time of the week
-  const now = new Date();
+  const now = ;
   const daysOfWeek = [
     "Sunday",
     "Monday",
@@ -18,8 +18,8 @@ app.get("/api", (req, res) => {
 
   res.json({
     slack_name,
-    currentDay: daysOfWeek[now.getDay()],
-    utc_time: now.toISOString().split("."),
+    currentDay: daysOfWeek[new Date().getDay()],
+    utc_time: new Date().toISOString().split("."),
     track,
     github_file_Url: "https://github.com/toyeuthman/",
     github_repo_url: "https://github.com/toyeuthman/Task-1.git",
