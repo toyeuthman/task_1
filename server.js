@@ -17,7 +17,7 @@ app.get("/api", (req, res) => {
   res.json({
     slack_name,
     currentDay: daysOfWeek[new Date().getDay()],
-    utc_time: new Date().toISOString().split("."),
+    utc_time: new Date().toISOString().split(".")[0] + "Z",
     track,
     github_file_Url: "https://github.com/toyeuthman/",
     github_repo_url: "https://github.com/toyeuthman/Task-1.git",
