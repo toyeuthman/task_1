@@ -7,19 +7,19 @@ app.get("/api", (req, res) => {
   // current day and time of the week
   const now = new Date();
   const currentDay = now.toLocaleDateString('en-US', { weekday: 'long' });
-  const utcTime = now.toISOString();
+  const utc_time = now.toISOString();
 
   //Github links
-  const gitHubFileUrl = "https://github.com/toyeuthman/Task-1/blob/main/app.js"
-  const gitHubRepoUrl = "https://github.com/toyeuthman/Task-1.git"
+  const github_file_Url = "https://github.com/toyeuthman/Task-1/blob/main/app.js"
+  const github_repo_url = "https://github.com/toyeuthman/Task-1.git"
 
   res.json({
     slack_name,
     currentDay,
-    utcTime,
+    utc_time,
     track,
-    gitHubFileUrl,
-    gitHubRepoUrl,
+    github_file_Url,
+    github_repo_url,
     status_code: 200,
   });
 });
