@@ -19,8 +19,8 @@ app.get("/api", (req, res) => {
     currentDay: daysOfWeek[new Date().getDay()],
     utc_time: new Date().toISOString().split(".")[0] + "Z",
     track,
-    github_file_Url: "https://github.com/toyeuthman/",
-    github_repo_url: "https://github.com/toyeuthman/Task-1.git",
+    github_file_Url: "https://github.com/toyeuthman/task-1.git",
+    github_repo_url: "https://github.com/toyeuthman/",
     status_code: 200,
   });
 });
