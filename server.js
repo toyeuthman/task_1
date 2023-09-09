@@ -4,8 +4,6 @@ const app = express();
 app.get("/api", (req, res) => {
   const { slack_name, track } = req.query;
 
-  // current day and time of the week
-  const now = ;
   const daysOfWeek = [
     "Sunday",
     "Monday",
